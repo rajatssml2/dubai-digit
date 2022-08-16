@@ -1,4 +1,4 @@
-<div class="sticky-wrapper" [ngStyle]="{'height': isSticky ? '49px' : '' }">
+<div class="sticky-wrapper" [ngStyle]="{'height': isSticky ? '49px' : '' }" style="    margin-top: 18px;">
   <div class="sticky-header main-bar-wraper color-fill" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
     <div class="main-bar header-botton nav-bg-secondry">
       <div class="">
@@ -77,15 +77,15 @@
             </div> -->
           <div class="grant-mng-sys1" *ngIf="!loginUser">
             <!-- Grant Management System  -->
-            <a href="javascript:void(0)" class="btn btn-primary" [routerLink]="'employee/login'">
-              Employee Login
+            <a href="javascript:void(0)" style="color: white;" [routerLink]="'employee/login'">
+             <u>Employee Login</u> 
             </a>
 
           </div>
           <div class="grant-mng-sys1" style="margin-left: 10px;" *ngIf="!loginUser">
             <!-- Grant Management System  -->
-            <a href="javascript:void(0)" class="btn btn-primary" [routerLink]="'citizen/login'">
-              Citizen Login
+            <a href="javascript:void(0)"  style="color: white;" [routerLink]="'citizen/login'">
+              <u>Citizen Login</u>
             </a>
 
           </div>
