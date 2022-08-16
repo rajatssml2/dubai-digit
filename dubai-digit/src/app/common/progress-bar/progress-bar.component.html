@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-center align-items-center">
+
+    <div class="progresses">
+
+        <div *ngFor="let bar of steps; let i = index" style="display: contents;">
+            <div class="steps">
+                <span><i class="fa fa-check"></i></span>
+                <div class="progress-text">{{bar}}</div>
+            </div>
+            
+            <span class="line" *ngIf="i!=steps.length-1"></span>
+        </div>
+        
+
+        <!-- <div class="steps">
+            <span><i class="fa fa-check"></i></span>
+            <div class="progress-text"></div>
+        </div>
+        
+
+        <span class="line"></span>
+
+        <div class="steps">
+            <span class="font-weight-bold">3</span>
+            <div class="progress-text"></div>
+        </div>
+
+        <span class="line"></span>
+
+        <div class="steps">
+            <span class="font-weight-bold">3</span>
+            <div class="progress-text"></div>
+        </div>
+
+        <span class="line"></span>
+
+        <div class="steps">
+            <span class="font-weight-bold">3</span>
+            <div class="progress-text"></div>
+        </div>
+
+        <span class="line"></span>
+
+        <div class="steps">
+            <span class="font-weight-bold">3</span>
+            <div class="progress-text"></div>
+        </div>
+
+        <span class="line"></span>
+
+        <div class="steps">
+            <span class="font-weight-bold">3</span>
+            <div class="progress-text"></div>
+        </div> -->
+    </div>
+
+</div>

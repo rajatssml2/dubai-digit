@@ -1,0 +1,72 @@
+<div class="login-container">
+    <div class="grnt-mng-sec">
+        <!-- <h5>Grant Management System</h5> -->
+    </div>
+    <div class="container login-container-main">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Citizen Signup</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><img class="login-with-img" src="../../../assets/images/facebook.png" alt=""></span>
+                        <span><img class="login-with-img" src="../../../assets/images/google.png" alt=""></span>
+                        <span><img class="login-with-img" src="../../../assets/images/twiteer.jpg" alt=""></span>
+                        <!-- <span><i class="fab fa-facebook-square"></i></span> -->
+                        <!-- <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span> -->
+                    </div>
+                </div>
+                <div class="card-body">
+                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                            <input type="text" formControlName="name" class="form-control" placeholder="Enter your name">
+                            
+                          
+                        </div>
+                        <div *ngIf="f.name.touched && f.name.invalid" class="not-valid">  
+                            <div *ngIf="f.name.errors.required">Name is required.</div>
+                        </div>  
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <input type="text" formControlName="phoneNo" class="form-control" placeholder="Enter your mobile number">
+                            
+                        </div>
+                        <div *ngIf="f.phoneNo.touched && f.phoneNo.invalid" class="not-valid">  
+                            <div *ngIf="f.phoneNo.errors.required">Mobile Number is required.</div>  
+                            <div *ngIf="f.phoneNo.errors.pattern">Please, Enter 10 digit Mobile Number.</div>  
+                        </div>  
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                            <select formControlName="emirates" class="form-control" name="state" id="state">
+                                <option value="" selected>Select emirates</option>
+                                <option *ngFor="let option of emirates" [value]="option">{{option}}</option>
+                                
+                            </select>
+                        </div>
+                        <div *ngIf="f.emirates.touched && f.emirates.invalid" class="not-valid">  
+                            <div *ngIf="f.emirates.errors.required">Emirates is required.</div>
+                        </div>  
+                        
+                        
+                        <div class="form-group">
+                            <input type="submit" value="Continue" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Already have an account?<a href="javascript:void(0)" (click)="goToLogin()">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
