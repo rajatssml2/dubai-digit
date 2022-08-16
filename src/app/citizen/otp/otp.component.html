@@ -1,0 +1,53 @@
+<div class="login-container">
+    <div class="grnt-mng-sec">
+        <!-- <h5>Grant Management System</h5> -->
+    </div>
+    <div class="container login-container-main">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card">
+                <div class="card-header">
+                    <h3>OTP</h3>
+                    <div class="d-flex justify-content-end social_icon">
+                        <span><img class="login-with-img" src="../../../assets/images/facebook.png" alt=""></span>
+                        <span><img class="login-with-img" src="../../../assets/images/google.png" alt=""></span>
+                        <span><img class="login-with-img" src="../../../assets/images/twiteer.jpg" alt=""></span>
+                        <!-- <span><i class="fab fa-facebook-square"></i></span> -->
+                        <!-- <span><i class="fab fa-google-plus-square"></i></span>
+                        <span><i class="fab fa-twitter-square"></i></span> -->
+                    </div>
+                </div>
+                <div class="card-body">
+                    
+                    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm)">
+                        <div class="input-group form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+                            </div>
+                            <input type="text" formControlName="otp" class="form-control" placeholder="Please enter the otp">
+                            
+                          
+                        </div>
+                        <div class="not-valid" *ngIf="loginForm.get('otp').invalid && (loginForm.get('otp').dirty || loginForm.get('otp').touched)">
+                            Please provide a otp.
+                        </div>
+                        
+                        <!-- <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div> -->
+                        <div class="form-group">
+                            <input type="submit" value="Continue" class="btn float-right login_btn">
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Don't have an account?<a href="#">Sign Up</a>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
