@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import config from '../../../../assets/config';
-
 @Component({
   selector: 'app-new-trade-licence',
   templateUrl: './new-trade-licence.component.html',
@@ -38,7 +38,7 @@ export class NewTradeLicenceComponent implements OnInit {
   gaugeTitles:any = FormArray;
    
   showPropertyDetails = false;
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder, private router: Router) {}
   
   ngOnInit() {
     this.finYears = config.finYear;
@@ -51,7 +51,7 @@ export class NewTradeLicenceComponent implements OnInit {
       structureType: ['', Validators.required],
       subStructureType: ['', Validators.required],
       tradeCommencementDate: ['', Validators.required],
-      tradeGSTNumber: [''],
+      // tradeGSTNumber: [''],
       operationalArea: [''],
       numberOfEmployees: ['']
     });
@@ -195,6 +195,20 @@ export class NewTradeLicenceComponent implements OnInit {
       console.log(this.tradeDetailsFormGroup.value);
       console.log(this.tradeUnits.value);
       console.log(this.accessoriesFormGrp.value);
+      console.log(this.propertyGroup.value);
+      console.log(this.tradeAddressFormGroup.value);
+      console.log(this.ownershipDetailsFormGrp.value);
+      let formVal:any = {
+        tradeDetailsForm: this.tradeDetailsFormGroup.value,
+        tradeUnitsForm: this.tradeUnits.value,
+        accessoriesForm: this.accessoriesFormGrp.value,
+        propertyForm: this.propertyGroup.value,
+        tradeAddressForm: this.tradeAddressFormGroup.value,
+        ownershipDetailsFor: this.ownershipDetailsFormGrp.value
+      }
+      formVal = JSON.stringify(formVal);
+      localStorage.setItem('TLFormValue', formVal)
+      this.router.navigate(['success'])
   }
 
   saveandnext() {

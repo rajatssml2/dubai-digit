@@ -10,6 +10,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,6 +30,8 @@ import { CitizenLandingComponent } from './citizen/citizen-landing/citizen-landi
 import { NewTradeLicenceComponent } from './citizen/trade-licence/new-trade-licence/new-trade-licence.component';
 import { ProgressBarComponent } from './common/progress-bar/progress-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SubmitPageComponent } from './common/submit-page/submit-page.component';
+import { SearchApplicationComponent } from './common/search-application/search-application.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     CitizenLandingComponent,
     NewTradeLicenceComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    SubmitPageComponent,
+    SearchApplicationComponent
   ],
   imports: [
    
@@ -62,7 +68,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatIconModule,
+    MatTableModule
     
   ],
   providers: [],

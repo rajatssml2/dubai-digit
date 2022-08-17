@@ -80,3 +80,46 @@
   }
 
 }
+
+.card-home {
+	background: rgba(255,255,255,.8);
+    border-radius: 0;
+    opacity: 1;
+}
+.home-footer {
+	position: absolute;
+    bottom: -161px;
+    width: 100%;
+}
+.cl-2 {
+	text-align: center;
+	z-index: 11;
+	cursor: pointer;
+}
+.cl-2-1 {
+	display: inline-block;
+    border: 1px solid #26890d;
+    height: 70px;
+    width: 70px;
+    border-radius: 70%;
+}
+.cl-2-1:hover {
+    background-color: white;
+}
+.cl-2-1 mat-icon{
+	font-size: 30px;
+    color: #26890d;
+    /* top: 10px; */
+    /* position: absolute; */
+    /* left: 0; */
+    margin-top: 20px;
+    margin-left: -3px;
+}
+.cl-2-1 span{
+	margin-top: 15px;
+    display: inline-block;
+	font-size: 15px;
+}
+.cl-2-1 span:hover{
+	color: #26890d;
+}

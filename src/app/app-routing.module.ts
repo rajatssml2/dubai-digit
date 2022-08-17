@@ -8,10 +8,20 @@ import { OtpComponent } from './citizen/otp/otp.component';
 import { HomeComponent } from './citizen/home/home.component';
 import { CitizenLandingComponent } from './citizen/citizen-landing/citizen-landing.component';
 import { NewTradeLicenceComponent } from './citizen/trade-licence/new-trade-licence/new-trade-licence.component';
+import { SubmitPageComponent } from './common/submit-page/submit-page.component';
+import { SearchApplicationComponent } from './common/search-application/search-application.component';
 const routes: Routes = [
   {
     path: '',
     component: LandingPageComponent
+  },
+  {
+    path: 'success',
+    component: SubmitPageComponent
+  },
+  {
+    path: 'search-application',
+    component: SearchApplicationComponent
   },
   {
     path: 'citizen/login',

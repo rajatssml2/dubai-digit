@@ -52,10 +52,10 @@
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
-                <mat-form-field>
+                <!-- <mat-form-field>
                     <mat-label>Trade GST Number</mat-label>
                     <input matInput placeholder="Trade GST Number" formControlName="tradeGSTNumber">
-                </mat-form-field>
+                </mat-form-field> -->
                 <mat-form-field>
                     <mat-label>Operational Sq.ft Area</mat-label>
                     <input matInput placeholder="Operational Sq.ft Area" formControlName="operationalArea">
@@ -204,8 +204,8 @@
                 <form [formGroup]="tradeAddressFormGroup">
                   <ng-template matStepLabel>Trade Address</ng-template>
                   <mat-form-field>
-                    <mat-label>Pincode</mat-label>
-                    <input matInput placeholder="Pincode" formControlName="pincode">
+                    <mat-label>Zip Code</mat-label>
+                    <input matInput placeholder="Zip Code" formControlName="pincode">
                   </mat-form-field>
                   <mat-form-field>
                     <mat-label>City</mat-label>

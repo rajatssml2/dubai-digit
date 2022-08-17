@@ -107,7 +107,8 @@ table tr td a {
 }
 
 ul li a:hover {
-    color: #d49d13 !important
+    color: #d49d13 !important;
+    background: none;
 }
 
 /* .left-menu-sec ul li a:hover{color:#fff!important;} */
